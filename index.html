@@ -1,9 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me</title>
+  <style>
+    body {
+      background-color: #B3EBF2;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-top: 30px;
+      background-color: aliceblue;
+       border-radius: 10px;
+       max-width: 300px;
+      text-align: center;
+      margin: 30px auto;         
+
+    }
+
+      h2{
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 30px;
+      background-color: aliceblue;
+       border-radius: 10px;
+       max-width: 300px;
+       padding: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 10px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .coding{
+      font-size: 18px;
+      margin: 10px auto;
+     max-width: 900px;
+     margin: 10px;
+     text-align: left;
+    }
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap; 
+    }
+
+    .image-item {
+      text-align: center;
+    }
+
+    .image-item img {
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .fun-fact-box {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.fun-fact-box button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0097A7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#fact-display {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.social {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.social a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #008CBA;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+
+
+  </style>
+
+ 
+
+</head>
 <body>
 
-<h1>About me</h1>
-<p>Hi! My name is Zoya!</p>
-<p>I just graduated highschool and will be starting college this fall in Germany!</p>
+  <h1>About me</h1>
+  <p>Hi! My name is Zoya! I just graduated high school and will be starting college this fall in Germany!</p>
+
+  <div class="image-row">
+    <div class="image-item">
+      <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2020/07/28/48859.jpg" alt="crochet image" />
+      <div class="caption">I love crocheting!</div>
+    </div>
+    <div class="image-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNDX2DqqCxCc7GjYMyYo4cmSsBDQrjIg4ycg&s" alt="doner kebab" />
+      <div class="caption">My favorite food is doner kebab! YUMM!</div>
+    </div>
+    <div class="image-item">
+      <img src="https://www.ubuy.com.pk/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNTFEQmQ3TzZHRUwuX0FDX1NMMTUwMF8uanBn.jpg" alt="robot" />
+      <div class="caption">I'll be majoring in Robotics!</div>
+    </div>
+  </div>
+
+  <h2>My KWK and Coding Journey!</h2>
+  <p class = "coding"> I first started my coding journey with Scratch back in elementary school. Since then, I have done various CS related courses and taken CS as one of my IB subjects too. Last year, I took part in KWK HTML & CSS's bootcamp, which I enjoyed very much! </p> 
+
+  <div class="fun-fact-box">
+  <button onclick="generateFunFact()">Fun Fact </button>
+  <p id="fact-display">Click the button to see a fun fact about me!</p>
+</div>
+
+<div class="social">
+  <a href="https://medium.com/@zoya.hammad99" target="_blank">Medium</a>
+  <a href="https://www.linkedin.com/in/zoya-hammad-5194812a6/" target="_blank">LinkedIn</a>
+</div>
+
+
+
+ <script>
+  function generateFunFact() {
+    const facts = [
+     "I have lived in 4 countries including: Pakistan, Kazakhstan, Ghana & Ivory Coast! About to be 5 soon!",
+     "I have 3 siblings: 2 sisters and 1 brother",
+     "Panda's are my favorite animal",
+     "I am the co-founder of SheTech which is a program aimed at teaching young girls about coding & technology",
+     "My favorite food is doner kebab!!",
+     "I love crocheting",
+     "I have curly hair",
+     "My favorite book is 3 daughters of Eve",
+     "I can speak English, Urdu and some French..",
+     "I love exploring tech",
+     "I enjoy using technology to advocate for things",
+     "I write blogs on Medium",
+     "I love nature",
+     "I'm not a sports person, but I prefer swimming",
+     "I love volunteering and helping people",
+    ];
+
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    const selectedFact = facts[randomIndex];
+
+   document.getElementById("fact-display").textContent = selectedFact;
+  }
+</script>
+
 </body>
 </html>
